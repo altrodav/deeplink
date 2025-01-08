@@ -16,10 +16,10 @@ app.get('/getapp', (req, res) => {
         res.redirect('https://play.google.com/store/apps/details?id=com.profcymasolutions.meetx');
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
         // Redirect to App Store if iOS device
-        res.redirect('https://altrodav.com');
+        res.redirect('https://meetx.co.in/');
     } else {
         // Redirect to your website for unsupported platforms
-        res.redirect('https://altrodav.com');
+        res.redirect('https://altrodav.com/');
     }
 });
 
