@@ -13,7 +13,7 @@ app.get('/getapp', (req, res) => {
     
     if (/android/i.test(userAgent)) {
         // Redirect to Play Store if Android device
-        res.redirect('https://play.google.com/store/apps/details?id=com.yourapp');
+        res.redirect('https://play.google.com/store/apps/details?id=com.profcymasolutions.meetx');
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
         // Redirect to App Store if iOS device
         res.redirect('https://altrodav.com');
