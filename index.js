@@ -4,7 +4,7 @@ const app = express();
 // Route for redirection
 app.get("/",(req,res)=>{
     res.status(200).json(
-        "welcome to the 8 Store API"
+        "welcome to the Meet-X"
     );
 });
 
