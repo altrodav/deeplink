@@ -2,7 +2,13 @@ const express = require('express');
 const app = express();
 
 // Route for redirection
-app.get('/', (req, res) => {
+app.get("/",(req,res)=>{
+    res.status(200).json(
+        "welcome to the 8 Store API"
+    );
+});
+
+app.get('/getapp', (req, res) => {
     const userAgent = req.headers['user-agent']; // Extract the user-agent string
     
     if (/android/i.test(userAgent)) {
