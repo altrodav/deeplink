@@ -8,7 +8,9 @@ app.get("/",(req,res)=>{
     );
 });
 
-app.get('/getapp', (req, res) => {
+app.get('/getapp/:id', (req, res) => {
+
+    const {id} = req.params;
     const userAgent = req.headers['user-agent']; // Extract the user-agent string
     
     if (/android/i.test(userAgent)) {
@@ -16,7 +18,8 @@ app.get('/getapp', (req, res) => {
         res.redirect('https://www.meetmux.com/form/');
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
         // Redirect to App Store if iOS device
-        res.redirect('https://apps.apple.com/in/app/meetmux/id6747908089');
+        res.redirect(`https://www.meetmux.com/reddem/${id}`);
+        // res.redirect('https://apps.apple.com/in/app/meetmux/id6747908089');
     } else {
         // Redirect to your website for unsupported platforms
         res.redirect('https://altrodav.com/');
