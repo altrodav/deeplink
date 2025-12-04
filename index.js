@@ -15,7 +15,7 @@ app.get('/getapp/:id', (req, res) => {
     
     if (/android/i.test(userAgent)) {
         // Redirect to Play Store if Android device
-        res.redirect('https://www.meetmux.com/form/');
+        res.redirect(`https://www.meetmux.com/reddem/${id}`);
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
         // Redirect to App Store if iOS device
         res.redirect(`https://www.meetmux.com/reddem/${id}`);
