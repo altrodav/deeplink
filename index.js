@@ -15,10 +15,10 @@ app.get('/getapp/:id', (req, res) => {
     
     if (/android/i.test(userAgent)) {
         // Redirect to Play Store if Android device
-        res.redirect(`https://www.meetmux.com/reddem/${id}`);
+        res.redirect(`https://apps.apple.com/in/app/meetmux/id6747908089`);
     } else if (/iphone|ipad|ipod/i.test(userAgent)) {
         // Redirect to App Store if iOS device
-        res.redirect(`https://www.meetmux.com/reddem/${id}`);
+        res.redirect(`https://play.google.com/store/apps/details?id=com.flow.meetmux&pcampaignid=web_share`);
         // res.redirect('https://apps.apple.com/in/app/meetmux/id6747908089');
     } else {
         // Redirect to your website for unsupported platforms
